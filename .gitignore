@@ -1,0 +1,3 @@
+## igore files ##
+
+result/**/*.model
