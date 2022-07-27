@@ -1,0 +1,22 @@
+DATAPATH_DICT = {
+    "cola":{
+        "train":"dataset/task1_grammar/NIKL_CoLA_train.tsv",
+        "val":"dataset/task1_grammar/NIKL_CoLA_dev.tsv",
+        "test":"dataset/task1_grammar/NIKL_CoLA_test.tsv"
+    },
+    "wic":{
+        "train":"dataset/task2_homonym/NIKL_SKT_WiC_Train.tsv",
+        "val":"dataset/task2_homonym/NIKL_SKT_WiC_Dev.tsv",
+        "test":"dataset/task2_homonym/NIKL_SKT_WiC_Test.tsv"
+    },
+    "copa":{
+        "train":"dataset/task3_COPA/SKT_COPA_Train.tsv",
+        "val":"dataset/task3_COPA/SKT_COPA_Dev.tsv",
+        "test":"dataset/task3_COPA/SKT_COPA_Test.tsv"
+    },
+    "boolq":{
+        "train":"dataset/task4_boolQA/SKT_BoolQ_Train.tsv",
+        "val":"dataset/task4_boolQA/SKT_BoolQ_Dev.tsv",
+        "test":"dataset/task4_boolQA/SKT_BoolQ_Test.tsv"
+    },
+}
