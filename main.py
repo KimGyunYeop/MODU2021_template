@@ -39,7 +39,7 @@ val_data_path = DATAPATH_DICT[task]["val"]
 train_dataset = DATASET_DICT[model_name](train_data_path, pretrain_model_path, max_length)
 val_dataset = DATASET_DICT[model_name](val_data_path, pretrain_model_path, max_length)
 train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
+val_dataloader = DataLoader(val_dataset, batch_size=batch_size)
 
 #load model
 model = MODEL_DICT[model_name](pretrain_model_path)
@@ -114,7 +114,10 @@ for e in range(EPOCH):
     torch.save(model.state_dict(), os.path.join(save_path, '{}.model'.format(e)))
     print("saving model at {}...".format(os.path.join(save_path, '{}.model'.format(e))))
     print("--------------------")
-
     break
 
 json.dump(result_json, open(os.path.join(save_path, 'result.json'), "w"), indent=4)
+
+#save setting
+setting_json = {"task":task, "model_name":model_name, "pretrain_model_path":pretrain_model_path, "batch_size":batch_size, "max_len":max_length, "lr":lr, "eps":eps}
+json.dump(setting_json, open(os.path.join(save_path, 'setting.json'), "w"), indent=4)

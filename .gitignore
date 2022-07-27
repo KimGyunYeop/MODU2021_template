@@ -2,3 +2,4 @@
 
 result/**/*.model
 result/**/*.json
+result/**/*.tsv
