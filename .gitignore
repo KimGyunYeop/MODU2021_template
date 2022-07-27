@@ -1,3 +1,4 @@
 ## igore files ##
 
 result/**/*.model
+result/**/*.json
